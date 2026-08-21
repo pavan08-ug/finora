@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "FINORA"
+description = "A premium frontend-only personal finance decision platform that helps people understand their money, simulate scenarios, and make more confident decisions with calm, actionable insights."
+version = "1.0.0"
+id = "artifacts/finora"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18378
+
+[services.development]
+run = "pnpm --filter @workspace/finora run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/finora", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/finora/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18378"
+BASE_PATH = "/"
