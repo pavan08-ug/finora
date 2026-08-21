@@ -1,0 +1,1393 @@
+Build a premium, production-quality fintech web application frontend called:
+
+# FINORA
+
+### Tagline:
+
+**Understand. Simulate. Decide.**
+
+Finora is an AI-powered personal financial decision platform designed around the problem of financial literacy vs financial confidence.
+
+The application should help users understand their income, expenses, savings, investments, financial goals, risk profile, and hypothetical financial decisions.
+
+The core product philosophy is:
+
+**Complex financial data → Clear understanding → Personalized insight → Actionable decision**
+
+IMPORTANT:
+
+This phase is FRONTEND ONLY.
+
+Do NOT build the backend, database, authentication service, real AI integration, payment system, broker integration, or real financial API integrations yet.
+
+Use realistic local mock/demo data and clean frontend architecture so the backend can be connected later without redesigning the UI.
+
+---
+
+# 1. DESIGN DIRECTION
+
+The application must look like a serious modern fintech startup, NOT a college project.
+
+Visual references should feel like a combination of:
+
+* Premium fintech SaaS
+* Modern banking dashboard
+* AI productivity platform
+* Minimal enterprise analytics product
+
+Use a clean LIGHT theme.
+
+Primary visual style:
+
+* White / off-white backgrounds
+* Dark navy/charcoal typography
+* One sophisticated primary accent color
+* Very subtle gradients
+* Soft shadows
+* Rounded cards
+* Clean borders
+* Excellent spacing
+* Modern typography
+* Minimal but meaningful animations
+
+Do NOT use excessive purple gradients.
+
+Do NOT make every card colorful.
+
+Do NOT use giant illustrations everywhere.
+
+Do NOT make it look like a generic AI chatbot.
+
+The product should feel trustworthy, intelligent, premium, and calm.
+
+---
+
+# 2. TECH STACK
+
+Use:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Vite if appropriate
+* Lucide React icons
+* Recharts for charts
+* Reusable components
+* Responsive design
+
+Use clean component architecture.
+
+Avoid putting the entire application inside one huge component.
+
+Create reusable components such as:
+
+* Sidebar
+* Topbar
+* MetricCard
+* InsightCard
+* GoalCard
+* ProgressBar
+* ChartCard
+* RiskBadge
+* EmptyState
+* Modal
+* Drawer
+* Button
+* Input
+* Select
+* Tooltip
+* Avatar
+* Notification
+* AIMessage
+
+Use proper TypeScript types.
+
+---
+
+# 3. APPLICATION STRUCTURE
+
+Create these main areas:
+
+PUBLIC:
+
+/
+Landing Page
+
+/app
+Dashboard
+
+/app/goals
+Goals
+
+/app/spending
+Spending Analysis
+
+/app/portfolio
+Portfolio
+
+/app/risk
+Risk Profile
+
+/app/what-if
+What-If Simulator
+
+/app/decision-lab
+Decision Lab
+
+/app/assistant
+Ask Finora
+
+/app/profile
+Profile & Settings
+
+Also create:
+
+/onboarding
+
+for the financial onboarding experience.
+
+Use frontend routing.
+
+For now, navigation can work with mock state.
+
+---
+
+# 4. LANDING PAGE
+
+Create a highly polished landing page.
+
+Hero section:
+
+## Headline
+
+**Make smarter financial decisions with clarity.**
+
+Subheadline:
+
+"Understand your money, simulate financial scenarios, and turn complex financial information into personalized, actionable insights."
+
+Primary CTA:
+
+**Get Started**
+
+Secondary CTA:
+
+**Explore Demo**
+
+Hero visual:
+
+Show a beautiful floating dashboard preview containing:
+
+* Financial Health Score
+* Goal progress
+* AI insight
+* Spending chart
+* Small portfolio chart
+
+Add subtle animations.
+
+Do NOT make the hero excessively animated.
+
+---
+
+# 5. LANDING PAGE SECTIONS
+
+Create these sections:
+
+## Problem
+
+Headline:
+
+**Knowing your numbers isn't enough.**
+
+Explain the difference between financial information and financial confidence.
+
+Show three problems:
+
+### Invest without understanding risk
+
+Users may invest because of trends or social media without understanding whether the decision fits their situation.
+
+### Financial information is fragmented
+
+Income, savings, investments, expenses and goals are often difficult to understand together.
+
+### Data doesn't tell you what to do
+
+Users see numbers but don't know what action to take.
+
+---
+
+## Solution
+
+Headline:
+
+**From financial data to confident decisions.**
+
+Show:
+
+DATA
+
+↓
+
+UNDERSTAND
+
+↓
+
+SIMULATE
+
+↓
+
+DECIDE
+
+Use a clean visual flow.
+
+---
+
+## Features
+
+Create feature cards:
+
+### Financial Health
+
+Understand your overall financial position.
+
+### Goal Planning
+
+Track progress toward meaningful financial goals.
+
+### Spending Intelligence
+
+Understand where your money goes.
+
+### Portfolio View
+
+See investments in one place.
+
+### Risk Profile
+
+Understand your financial risk profile.
+
+### What-If Simulator
+
+Explore how financial decisions could affect your future.
+
+---
+
+## AI Section
+
+Headline:
+
+**Your financial situation, explained in plain language.**
+
+Show an AI insight panel.
+
+Example:
+
+"Your savings rate is 28% this month. Increasing monthly savings by ₹2,000 could help you reach your current vehicle goal sooner."
+
+Add:
+
+**Why am I seeing this?**
+
+button.
+
+---
+
+## What-If Section
+
+Create a large interactive-looking showcase:
+
+User changes:
+
+Monthly Savings
+₹5,000 → ₹8,000
+
+Show:
+
+Goal progress
+
+68% → 82%
+
+Emergency fund
+
+3.1 months → 3.7 months
+
+Use animated visual transitions.
+
+This is a visual demo only at this stage.
+
+---
+
+## Final CTA
+
+Headline:
+
+**Your money should make sense to you.**
+
+Button:
+
+**Start with Finora**
+
+---
+
+# 6. ONBOARDING
+
+Create a beautiful multi-step onboarding experience.
+
+Progress indicator:
+
+01 Profile
+02 Income
+03 Spending
+04 Investments
+05 Goals
+06 Risk
+
+Do NOT make it feel like a boring form.
+
+Use one question per section with large inputs.
+
+---
+
+## Step 1
+
+### Tell us about yourself
+
+Fields:
+
+Name
+
+Age range
+
+Occupation
+
+Financial experience:
+
+Beginner
+Intermediate
+Experienced
+
+---
+
+## Step 2
+
+### Understand your monthly finances
+
+Inputs:
+
+Monthly income
+
+Essential expenses
+
+Discretionary expenses
+
+Current savings
+
+Show live calculation:
+
+Monthly surplus:
+
+₹14,000
+
+Savings rate:
+
+40%
+
+---
+
+## Step 3
+
+### Where does your money go?
+
+Allow selecting expense categories.
+
+Show a visual preview.
+
+---
+
+## Step 4
+
+### What do you currently own?
+
+Investment categories:
+
+Mutual Funds
+Stocks
+Fixed Deposits
+PPF
+Gold
+Bonds
+Other
+
+Use cards with icons.
+
+---
+
+## Step 5
+
+### What are you working toward?
+
+Goal cards:
+
+Emergency Fund
+Vehicle
+Education
+Travel
+House
+Retirement
+Custom
+
+Allow adding a custom goal.
+
+---
+
+## Step 6
+
+### Understand your risk profile
+
+Create an attractive questionnaire.
+
+Example question:
+
+"If your investments temporarily dropped 15%, what would you most likely do?"
+
+Options:
+
+Sell immediately
+Wait and monitor
+Continue investing
+Invest more
+
+Show progress.
+
+At the end:
+
+**Your Risk Profile**
+
+Moderate
+
+with a visual gauge.
+
+For frontend purposes, use mock deterministic results.
+
+---
+
+# 7. DASHBOARD
+
+This is the most important screen.
+
+Create:
+
+## Header
+
+"Good evening, Bhargava."
+
+Subtext:
+
+"Here's how your financial life is looking today."
+
+Right side:
+
+Notifications
+Profile avatar
+
+---
+
+# 8. FINANCIAL HEALTH HERO
+
+Large premium card:
+
+### Financial Health
+
+**78 / 100**
+
+Status:
+
+**Healthy**
+
+Under it:
+
+"You're building a solid financial foundation, but your emergency savings could be stronger."
+
+Create a circular or semi-circular score visualization.
+
+Include:
+
+**Why this score?**
+
+button.
+
+Clicking opens a breakdown.
+
+---
+
+# 9. FINANCIAL SNAPSHOT
+
+Create four cards:
+
+### Monthly Income
+
+₹35,000
+
+### Monthly Expenses
+
+₹21,000
+
+### Monthly Surplus
+
+₹14,000
+
+### Investments
+
+₹2,40,000
+
+Use subtle trend indicators.
+
+---
+
+# 10. AI INSIGHTS
+
+Large section:
+
+## Finora Insights
+
+Cards:
+
+### Positive
+
+"You're currently saving 40% of your monthly income."
+
+### Attention
+
+"Your emergency fund covers approximately 2.8 months of expenses."
+
+### Goal
+
+"Your bike goal is progressing well, but increasing monthly contributions could move you ahead of schedule."
+
+Each card should have:
+
+Icon
+Category
+Insight
+Small explanation
+Action button
+
+Example:
+
+**Explore**
+
+---
+
+# 11. GOALS PREVIEW
+
+Title:
+
+## Your Goals
+
+Create 3 example goals.
+
+### 🏍️ New Bike
+
+Target:
+₹2,00,000
+
+Current:
+₹1,35,000
+
+Progress:
+67%
+
+Status:
+On Track
+
+---
+
+### 🏠 Emergency Fund
+
+Target:
+₹1,50,000
+
+Current:
+₹90,000
+
+Progress:
+60%
+
+Status:
+Needs Attention
+
+---
+
+### ✈️ Travel
+
+Target:
+₹80,000
+
+Current:
+₹24,000
+
+Progress:
+30%
+
+Status:
+In Progress
+
+---
+
+# 12. SPENDING OVERVIEW
+
+Create a modern spending visualization.
+
+Show:
+
+Total spending:
+
+₹21,000
+
+Categories:
+
+Food
+₹4,500
+
+Transport
+₹3,000
+
+Shopping
+₹5,000
+
+Bills
+₹4,000
+
+Other
+₹4,500
+
+Use:
+
+Donut chart
+
+and
+
+Monthly spending trend line.
+
+---
+
+# 13. PORTFOLIO PREVIEW
+
+Show:
+
+Total Portfolio:
+
+₹2,40,000
+
+Invested:
+
+₹2,00,000
+
+Current:
+
+₹2,40,000
+
+Gain:
+
++₹40,000
+
+Create asset allocation:
+
+Mutual Funds
+Stocks
+FD
+Gold
+
+Use a clean donut chart.
+
+---
+
+# 14. WHAT-IF PREVIEW
+
+Create a large dashboard card:
+
+## What if you saved ₹3,000 more every month?
+
+Show:
+
+Current goal completion:
+
+67%
+
+Projected:
+
+82%
+
+Add CTA:
+
+**Run Simulation**
+
+Click opens /app/what-if.
+
+---
+
+# 15. SIDEBAR
+
+Desktop sidebar should contain:
+
+FINORA logo
+
+Overview
+Goals
+Spending
+Portfolio
+Risk Profile
+What-If
+Decision Lab
+Ask Finora
+
+Divider
+
+Settings
+Help
+
+At bottom:
+
+User avatar
+
+Bhargava BM
+Personal account
+
+Sidebar should collapse on smaller screens.
+
+---
+
+# 16. GOALS PAGE
+
+Create a dedicated Goals dashboard.
+
+Header:
+
+**Your Financial Goals**
+
+Subtext:
+
+"Turn what matters to you into a plan."
+
+Top-right:
+
+**+ Add Goal**
+
+Show:
+
+Total goals
+
+₹4,20,000 total target
+
+Overall progress
+
+54%
+
+Goal cards with:
+
+* Icon
+* Name
+* Target amount
+* Current amount
+* Progress
+* Target date
+* Monthly contribution
+* Status
+
+Include:
+
+On Track
+Needs Attention
+Behind
+
+filters.
+
+---
+
+# 17. SPENDING PAGE
+
+Header:
+
+**Understand where your money goes.**
+
+Top cards:
+
+Monthly spending
+₹21,000
+
+Essential
+₹12,000
+
+Discretionary
+₹9,000
+
+Create:
+
+Spending trend chart
+
+Category donut
+
+Category breakdown table
+
+Recent transactions
+
+Example:
+
+Swiggy
+₹420
+Food
+Today
+
+Metro
+₹80
+Transport
+Today
+
+Amazon
+₹1,299
+Shopping
+Yesterday
+
+Use fictional demo data.
+
+---
+
+# 18. PORTFOLIO PAGE
+
+Header:
+
+**Your Portfolio**
+
+Top metrics:
+
+Invested
+₹2,00,000
+
+Current value
+₹2,40,000
+
+Total gain
+₹40,000
+
+Create:
+
+Portfolio value chart
+
+Asset allocation donut
+
+Investment list
+
+Columns:
+
+Investment
+Type
+Invested
+Current
+Gain
+Allocation
+
+Include:
+
+**+ Add Investment**
+
+---
+
+# 19. RISK PROFILE PAGE
+
+Create a premium risk profile visualization.
+
+Headline:
+
+**Your Risk Profile**
+
+Result:
+
+### MODERATE
+
+Score:
+
+62 / 100
+
+Create a horizontal scale:
+
+Conservative ───── Moderate ───── Aggressive
+
+Place indicator at 62.
+
+Below:
+
+### Why?
+
+Show factors:
+
+Investment horizon
+Medium
+
+Financial stability
+Good
+
+Market-loss tolerance
+Moderate
+
+Investment experience
+Beginner
+
+Then:
+
+### What this means
+
+Use a simple explanation.
+
+Add:
+
+**Retake Assessment**
+
+---
+
+# 20. WHAT-IF SIMULATOR
+
+This should be one of the most impressive frontend screens.
+
+Header:
+
+# What-If Simulator
+
+Subtext:
+
+"Explore how small financial changes could affect your goals."
+
+Create a two-column layout.
+
+LEFT:
+
+Controls.
+
+Monthly income
+₹35,000
+
+Monthly savings
+₹14,000
+
+Monthly expenses
+₹21,000
+
+Goal target
+₹2,00,000
+
+Time horizon
+18 months
+
+Allow sliders and numeric inputs.
+
+RIGHT:
+
+Simulation result.
+
+### Current
+
+Goal progress:
+
+67%
+
+Monthly surplus:
+
+₹14,000
+
+Emergency coverage:
+
+2.8 months
+
+### Scenario
+
+Goal progress:
+
+82%
+
+Monthly surplus:
+
+₹17,000
+
+Emergency coverage:
+
+3.5 months
+
+Use animated comparison charts.
+
+Add:
+
+**Reset Scenario**
+
+**Save Scenario**
+
+---
+
+# 21. DECISION LAB
+
+Create a unique financial decision interface.
+
+Header:
+
+**Decision Lab**
+
+Subtext:
+
+"Explore the financial impact of a decision before making it."
+
+Example decision:
+
+### "Can I afford a ₹1.5L bike?"
+
+Inputs:
+
+Purchase price
+
+₹1,50,000
+
+Purchase date
+
+12 months
+
+Funding source:
+
+Savings
+
+Button:
+
+**Analyze Decision**
+
+Show a beautiful result panel:
+
+### Financial Impact
+
+Savings after purchase:
+
+₹60,000
+
+Emergency coverage:
+
+1.8 months
+
+Bike goal:
+
+Completed
+
+Overall financial health:
+
+78 → 61
+
+Then show:
+
+### Finora's Perspective
+
+"This purchase would significantly reduce your emergency savings buffer."
+
+Important:
+
+Do NOT use language such as:
+
+"BUY"
+
+or
+
+"DON'T BUY"
+
+The application should support informed decision-making rather than pretending to make guaranteed financial decisions for the user.
+
+---
+
+# 22. ASK FINORA
+
+Create a dedicated AI assistant page.
+
+The interface should feel more like a financial copilot than a generic ChatGPT clone.
+
+Header:
+
+# Ask Finora
+
+Subtext:
+
+"Ask questions about your financial situation."
+
+Suggested questions:
+
+"Why is my financial health score 78?"
+
+"Am I saving enough for my bike goal?"
+
+"Where am I spending the most?"
+
+"Explain my risk profile."
+
+"What changed this month?"
+
+Chat interface:
+
+User message
+
+↓
+
+AI response
+
+Use a polished assistant layout.
+
+Add contextual insight cards alongside the conversation.
+
+For frontend purposes, use realistic mock responses.
+
+Do NOT integrate a real AI API yet.
+
+---
+
+# 23. PROFILE / SETTINGS
+
+Create:
+
+Personal information
+
+Financial preferences
+
+Notification settings
+
+Privacy
+
+Theme
+
+Logout
+
+Add:
+
+**Reset Demo Data**
+
+button.
+
+---
+
+# 24. MOBILE RESPONSIVENESS
+
+The application must be fully responsive.
+
+Desktop:
+
+Sidebar + dashboard
+
+Tablet:
+
+Collapsed sidebar
+
+Mobile:
+
+Bottom navigation or mobile drawer.
+
+Ensure:
+
+* Charts don't overflow.
+* Cards stack correctly.
+* Tables become scrollable/cards.
+* Buttons remain accessible.
+* Inputs work properly.
+* Typography scales appropriately.
+
+---
+
+# 25. MICRO-INTERACTIONS
+
+Add subtle professional animations:
+
+* Page transitions
+* Card hover
+* Button hover
+* Progress animation
+* Chart entrance
+* Number count-up for important dashboard metrics
+* Modal transitions
+* Sidebar transitions
+
+Keep animations subtle.
+
+Performance is more important than animation.
+
+---
+
+# 26. ACCESSIBILITY
+
+Follow good accessibility practices:
+
+* Semantic HTML
+* Keyboard navigation
+* Visible focus states
+* Proper labels
+* Sufficient contrast
+* ARIA labels where needed
+
+Do not sacrifice accessibility for visual effects.
+
+---
+
+# 27. MOCK DATA ARCHITECTURE
+
+Create a centralized mock-data layer.
+
+For example:
+
+/src/data/demoData.ts
+
+Keep all fictional financial data there.
+
+Create TypeScript types for:
+
+User
+FinancialProfile
+Expense
+Investment
+Goal
+RiskProfile
+Insight
+Simulation
+
+The frontend should consume these types instead of scattering hardcoded values throughout components.
+
+This will make backend integration easier later.
+
+---
+
+# 28. BACKEND-READY ARCHITECTURE
+
+Even though this phase is frontend-only:
+
+Do NOT tightly couple components to mock data.
+
+Create service abstractions such as:
+
+financialService
+goalsService
+portfolioService
+expenseService
+riskService
+aiService
+
+For now, these can return mock data.
+
+Later we should be able to replace them with real API/database implementations without rebuilding the UI.
+
+---
+
+# 29. IMPORTANT FINTECH SAFETY
+
+Do not claim:
+
+* Guaranteed returns
+* Guaranteed investment performance
+* Guaranteed future predictions
+
+Use terms such as:
+
+* Scenario
+* Projection
+* Estimate
+* Analysis
+* Insight
+
+Add a subtle disclaimer:
+
+"Finora provides educational financial insights and scenario-based analysis. It does not guarantee investment returns or replace professional financial advice."
+
+---
+
+# 30. QUALITY STANDARD
+
+Before finishing:
+
+Check every route.
+
+Check every button.
+
+Check every modal.
+
+Check every chart.
+
+Check mobile responsiveness.
+
+Check empty states.
+
+Check loading states.
+
+Check hover states.
+
+Check navigation.
+
+Check that no page contains placeholder text such as:
+
+"Lorem ipsum"
+
+"Coming soon"
+
+"TODO"
+
+"Replace this"
+
+"Sample text"
+
+unless it is deliberately part of demo data.
+
+Do not leave broken buttons.
+
+---
+
+# 31. IMPORTANT
+
+Do NOT implement backend functionality yet.
+
+Do NOT connect real financial APIs.
+
+Do NOT connect real banking accounts.
+
+Do NOT connect broker accounts.
+
+Do NOT implement real payments.
+
+Do NOT expose API keys.
+
+Do NOT create fake claims that the application is connected to real financial institutions.
+
+Use clearly labelled fictional demo data.
+
+---
+
+# 32. FINAL GOAL
+
+When I open the application, it should feel like I am opening a real fintech startup product.
+
+The visual hierarchy should immediately communicate:
+
+### "This platform understands my financial situation."
+
+The most important screens for the first frontend version are:
+
+1. Landing page
+2. Onboarding
+3. Dashboard
+4. Goals
+5. Spending
+6. Portfolio
+7. Risk Profile
+8. What-If Simulator
+9. Decision Lab
+10. Ask Finora
+11. Profile/Settings
+
+Prioritize quality over quantity.
+
+Build the frontend completely and cohesively.
+
+Do not stop after creating a landing page.
+
+Do not create a generic dashboard template.
+
+Create a distinctive, premium, hackathon-ready fintech experience centered around:
+
+# **Understand → Simulate → Decide**
+
+After implementation, verify that the entire frontend runs without errors and that all routes and interactions work with the mock data.
